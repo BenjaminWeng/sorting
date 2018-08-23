@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.8)
+project( sorting )
+#find_package( OpenCV REQUIRED )
+add_executable( sorting sorting.cpp )
+#target_link_libraries( stereo_match ${OpenCV_LIBS} )
