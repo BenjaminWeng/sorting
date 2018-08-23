@@ -45,14 +45,14 @@ public:
     {
         for (int i=1; i<n; i++)
         {
-            int key = a[i];
+            int keyVal = a[i];
             int j = i-1;
-            while (j>=0 && a[j]>key)
+            while (j>=0 &&  a[j]>keyVal)
             {
                 a[j+1] = a[j];
                 j--;
             }
-            a[j+1] = key;
+            a[j+1] = keyVal;
         }
     };
 
@@ -66,7 +66,7 @@ public:
                 if (a[min]>a[j])
                     min = j;
             }
-            swap(a[i], a[min]);
+            swap(a[min], a[i]);
         }
     };
 
@@ -88,8 +88,8 @@ int main(void)
     sorting s;
     //s.qsort(a, 0, size-1);
     //s.bubbleSort(a, size);
-    //s.insertionSort(a, size);
-    s.selectionSort(a, size);
+    s.insertionSort(a, size);
+    //s.selectionSort(a, size);
 
     cout << "size = " << size <<endl;
     for (int i=0; i<size; i++)
